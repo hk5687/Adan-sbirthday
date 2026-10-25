@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
 <title>For Adan Amin 🦋</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
 
 *{
@@ -17,40 +19,43 @@
 
 html,body{
     width:100%;
-    min-height:100%;
+    height:100%;
 }
 
 body{
     overflow:hidden;
     font-family:'Poppins',sans-serif;
-    color:white;
+    color:#fff;
 
     background:
-      radial-gradient(circle at 15% 20%,rgba(157,89,255,.18),transparent 30%),
-      radial-gradient(circle at 85% 25%,rgba(255,92,166,.16),transparent 28%),
-      radial-gradient(circle at 50% 100%,rgba(35,170,180,.12),transparent 35%),
-      linear-gradient(135deg,#080611,#10091d,#080812);
+    radial-gradient(circle at 10% 20%,rgba(178,92,255,.18),transparent 30%),
+    radial-gradient(circle at 90% 15%,rgba(255,85,170,.15),transparent 28%),
+    radial-gradient(circle at 50% 100%,rgba(70,180,190,.10),transparent 35%),
+    linear-gradient(135deg,#07050f,#12091d,#070812);
 }
 
+
 /* =========================
-   AURORA BACKGROUND
+   AURORA
 ========================= */
 
 .aurora{
     position:fixed;
     inset:-30%;
-    pointer-events:none;
     z-index:0;
+    pointer-events:none;
 
     background:
-      radial-gradient(ellipse at 30% 40%,rgba(150,90,255,.08),transparent 40%),
-      radial-gradient(ellipse at 70% 60%,rgba(255,80,160,.08),transparent 40%);
+    radial-gradient(ellipse at 30% 40%,rgba(170,90,255,.12),transparent 40%),
+    radial-gradient(ellipse at 70% 60%,rgba(255,90,180,.10),transparent 40%);
 
     filter:blur(60px);
-    animation:auroraMove 12s ease-in-out infinite alternate;
+
+    animation:aurora 12s ease-in-out infinite alternate;
 }
 
-@keyframes auroraMove{
+@keyframes aurora{
+
     from{
         transform:rotate(-5deg) scale(1);
     }
@@ -59,6 +64,7 @@ body{
         transform:rotate(8deg) scale(1.15);
     }
 }
+
 
 /* =========================
    STARS
@@ -73,15 +79,21 @@ body{
 
 .star{
     position:absolute;
+
     width:2px;
     height:2px;
+
     border-radius:50%;
+
     background:white;
+
     opacity:.5;
+
     animation:twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle{
+
     from{
         opacity:.15;
         transform:scale(.5);
@@ -89,9 +101,10 @@ body{
 
     to{
         opacity:1;
-        transform:scale(1.7);
+        transform:scale(1.5);
     }
 }
+
 
 /* =========================
    BUTTERFLIES
@@ -99,181 +112,152 @@ body{
 
 .butterfly{
     position:fixed;
-    z-index:3;
-    font-size:35px;
+
+    z-index:4;
+
+    font-size:32px;
+
     pointer-events:none;
 
     filter:
-      drop-shadow(0 0 8px rgba(255,180,230,.8))
-      drop-shadow(0 0 18px rgba(170,120,255,.4));
+    drop-shadow(0 0 8px rgba(255,180,230,.8))
+    drop-shadow(0 0 18px rgba(170,120,255,.5));
 
-    animation:butterflyFly 13s linear infinite;
+    animation:fly 14s linear infinite;
 }
 
 .b1{
-    left:-70px;
+    left:-60px;
     top:18%;
-    animation-delay:0s;
 }
 
 .b2{
-    left:-80px;
-    top:62%;
+    left:-70px;
+    top:65%;
     animation-delay:4s;
 }
 
 .b3{
-    right:-70px;
-    top:35%;
-    animation-delay:7s;
-    animation-direction:reverse;
+    left:-60px;
+    top:42%;
+    animation-delay:8s;
 }
 
-.b4{
-    right:-70px;
-    top:78%;
-    animation-delay:10s;
-    animation-direction:reverse;
-}
-
-@keyframes butterflyFly{
+@keyframes fly{
 
     0%{
-        transform:translateX(0) translateY(0) rotate(-10deg) scale(.8);
+        transform:translateX(0) translateY(0) rotate(-10deg);
     }
 
     20%{
-        transform:translateX(22vw) translateY(-70px) rotate(10deg) scale(1);
+        transform:translateX(25vw) translateY(-60px) rotate(10deg);
     }
 
     40%{
-        transform:translateX(45vw) translateY(60px) rotate(-8deg);
+        transform:translateX(50vw) translateY(50px) rotate(-8deg);
     }
 
     60%{
-        transform:translateX(68vw) translateY(-80px) rotate(8deg);
+        transform:translateX(70vw) translateY(-70px) rotate(8deg);
     }
 
     80%{
-        transform:translateX(88vw) translateY(40px) rotate(-8deg);
+        transform:translateX(90vw) translateY(40px) rotate(-5deg);
     }
 
     100%{
-        transform:translateX(115vw) translateY(-20px) rotate(10deg) scale(.8);
+        transform:translateX(115vw) translateY(-20px) rotate(10deg);
     }
 }
 
+
 /* =========================
-   MAIN
+   APP
 ========================= */
 
 .app{
     position:relative;
+
     z-index:5;
 
     width:100%;
     height:100vh;
 
     display:flex;
+
     justify-content:center;
     align-items:center;
 
-    padding:18px;
+    padding:12px;
 }
 
+
 /* =========================
-   GLASS CARD
+   CARD
 ========================= */
 
 .card{
+
     position:relative;
 
-    width:min(760px,94vw);
-    max-height:92vh;
+    width:min(760px,96vw);
+    height:min(720px,94vh);
 
-    padding:45px 30px;
+    border-radius:32px;
 
-    text-align:center;
+    padding:30px 25px;
 
     overflow:hidden;
 
-    border-radius:35px;
+    text-align:center;
 
     background:
-      linear-gradient(
+    linear-gradient(
         135deg,
         rgba(255,255,255,.09),
         rgba(255,255,255,.025)
-      );
+    );
 
-    border:1px solid rgba(255,255,255,.15);
-
-    box-shadow:
-      0 30px 100px rgba(0,0,0,.65),
-      inset 0 0 80px rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.14);
 
     backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.65),
+    inset 0 0 70px rgba(255,255,255,.025);
 }
 
-/* Decorative circles */
-
-.card:before{
-    content:"";
-
-    position:absolute;
-
-    width:280px;
-    height:280px;
-
-    top:-160px;
-    left:-120px;
-
-    border-radius:50%;
-
-    background:rgba(190,110,255,.12);
-
-    filter:blur(20px);
-}
-
-.card:after{
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-    height:300px;
-
-    right:-160px;
-    bottom:-160px;
-
-    border-radius:50%;
-
-    background:rgba(255,100,180,.1);
-
-    filter:blur(25px);
-}
 
 /* =========================
    SECTIONS
 ========================= */
 
 .section{
-    display:none;
-    position:relative;
-    z-index:2;
 
-    animation:sectionIn .8s ease;
+    display:none;
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    animation:appear .65s ease;
 }
 
 .section.active{
-    display:block;
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
 }
 
-@keyframes sectionIn{
+@keyframes appear{
 
     from{
         opacity:0;
-        transform:translateY(25px) scale(.97);
+        transform:translateY(20px) scale(.97);
     }
 
     to{
@@ -282,19 +266,19 @@ body{
     }
 }
 
+
 /* =========================
    OPENING
 ========================= */
 
 .open-icon{
-    font-size:70px;
 
-    animation:
-      giftFloat 2.5s ease-in-out infinite,
-      glow 2s ease-in-out infinite alternate;
+    font-size:68px;
+
+    animation:gift 2.5s ease-in-out infinite;
 }
 
-@keyframes giftFloat{
+@keyframes gift{
 
     0%,100%{
         transform:translateY(0) rotate(-3deg);
@@ -305,313 +289,220 @@ body{
     }
 }
 
-@keyframes glow{
-
-    from{
-        filter:drop-shadow(0 0 5px rgba(255,190,220,.2));
-    }
-
-    to{
-        filter:drop-shadow(0 0 25px rgba(255,190,220,.8));
-    }
-}
-
 .mini{
-    margin-top:20px;
 
-    font-size:12px;
-    letter-spacing:5px;
+    margin-top:18px;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    color:#d9baff;
+
     text-transform:uppercase;
-
-    color:#d7b9ff;
 }
 
 .open-title{
-    margin-top:14px;
+
+    margin-top:10px;
 
     font-family:'Great Vibes',cursive;
 
-    font-size:clamp(55px,11vw,90px);
+    font-size:clamp(60px,12vw,95px);
 
     font-weight:400;
 
     background:
-      linear-gradient(
+    linear-gradient(
         90deg,
         #fff,
-        #ffc6e4,
-        #dcb7ff,
+        #ffc6e5,
+        #d9b5ff,
         #fff
-      );
+    );
 
     -webkit-background-clip:text;
+
     color:transparent;
 }
 
 .open-text{
-    margin:15px auto 30px;
 
     max-width:500px;
+
+    margin:10px auto 28px;
 
     font-family:'Cormorant Garamond',serif;
 
     font-size:21px;
-    line-height:1.6;
 
-    color:#eadfeb;
+    line-height:1.55;
+
+    color:#eadfec;
 }
+
 
 /* =========================
    BUTTON
 ========================= */
 
 .btn{
-    border:none;
-    outline:none;
 
-    padding:14px 30px;
+    flex-shrink:0;
+
+    border:none;
+
+    padding:13px 28px;
 
     border-radius:50px;
 
     color:white;
 
     font-family:'Poppins',sans-serif;
-    font-size:14px;
+
+    font-size:13px;
 
     cursor:pointer;
 
     background:
-      linear-gradient(
+    linear-gradient(
         90deg,
-        rgba(255,126,190,.85),
-        rgba(154,110,255,.85)
-      );
+        rgba(255,120,185,.9),
+        rgba(150,105,255,.9)
+    );
 
     box-shadow:
-      0 8px 30px rgba(200,100,220,.25);
+    0 8px 28px rgba(190,100,220,.3);
 
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px) scale(1.03);
+
+    transform:translateY(-3px);
 
     box-shadow:
-      0 12px 40px rgba(220,110,220,.45);
+    0 12px 38px rgba(220,110,220,.45);
 }
+
 
 /* =========================
    NAME
 ========================= */
 
 .pre-title{
-    font-size:12px;
+
+    font-size:11px;
+
     letter-spacing:5px;
-    color:#d4b7ff;
+
+    color:#d8baff;
+
     text-transform:uppercase;
 }
 
 .main-name{
-    margin:12px 0;
+
+    margin:8px 0;
 
     font-family:'Great Vibes',cursive;
 
-    font-size:clamp(65px,13vw,115px);
+    font-size:clamp(65px,13vw,110px);
 
     font-weight:400;
 
     background:
-      linear-gradient(
+    linear-gradient(
         90deg,
         #fff,
-        #ffc4df,
-        #d8b6ff,
+        #ffc3df,
+        #d8b5ff,
         #fff
-      );
+    );
 
     -webkit-background-clip:text;
 
     color:transparent;
-
-    animation:nameGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes nameGlow{
-
-    from{
-        filter:drop-shadow(0 0 5px rgba(255,180,220,.1));
-    }
-
-    to{
-        filter:drop-shadow(0 0 18px rgba(255,180,220,.35));
-    }
 }
 
 .name-line{
+
     width:100px;
+
     height:1px;
 
-    margin:20px auto;
+    margin:15px auto;
 
     background:
-      linear-gradient(
+    linear-gradient(
         90deg,
         transparent,
-        #e4b6ff,
+        #e3b4ff,
         transparent
-      );
+    );
 }
 
 .name-sub{
+
+    max-width:550px;
+
     font-family:'Cormorant Garamond',serif;
 
-    font-size:22px;
-    line-height:1.7;
+    font-size:21px;
 
-    color:#eee1ec;
+    line-height:1.6;
 
-    max-width:580px;
-
-    margin:auto;
+    color:#eee2eb;
 }
+
 
 /* =========================
    HEADINGS
 ========================= */
 
 .section-title{
+
+    flex-shrink:0;
+
     font-family:'Great Vibes',cursive;
 
-    font-size:55px;
+    font-size:50px;
 
     font-weight:400;
 
-    color:#ffd0e5;
+    color:#ffd0e4;
 
-    margin-bottom:18px;
+    margin-bottom:8px;
 }
 
 .emoji-title{
-    font-size:35px;
-    margin-bottom:5px;
+
+    flex-shrink:0;
+
+    font-size:28px;
+
+    margin-bottom:3px;
 }
+
 
 /* =========================
-   TEXT
+   BIRTHDAY SCREEN
 ========================= */
 
-.text{
-    font-family:'Cormorant Garamond',serif;
+.birthday-screen{
 
-    font-size:20px;
+    justify-content:flex-start !important;
 
-    line-height:1.75;
-
-    color:#eee4ec;
-
-    max-height:52vh;
-
-    overflow-y:auto;
-
-    padding:0 8px;
+    padding-top:10px;
 }
-
-.text::-webkit-scrollbar{
-    width:3px;
-}
-
-.text::-webkit-scrollbar-thumb{
-    background:#d69bc3;
-    border-radius:10px;
-}
-
-/* =========================
-   DUA CARDS
-========================= */
-
-.duas{
-    display:grid;
-    gap:12px;
-
-    max-width:600px;
-
-    margin:20px auto;
-}
-
-.dua{
-    padding:16px 18px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.045);
-
-    border:1px solid rgba(255,210,235,.1);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:19px;
-
-    color:#f1e3ec;
-
-    transition:.3s;
-}
-
-.dua:hover{
-    transform:translateY(-3px);
-
-    background:rgba(255,255,255,.07);
-
-    border-color:rgba(255,190,220,.25);
-}
-
-/* =========================
-   ADVICE
-========================= */
-
-.advice{
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    text-align:left;
-
-    margin:12px auto;
-
-    max-width:570px;
-
-    padding:15px 18px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.04);
-
-    border-left:2px solid #dca8ff;
-}
-
-.advice-icon{
-    font-size:25px;
-}
-
-.advice p{
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:19px;
-
-    line-height:1.4;
-
-    color:#eee3ec;
-}
-
-/* =========================
-   CAKE
-========================= */
 
 .cake-wrap{
-    position:relative;
 
-    height:210px;
+    flex-shrink:0;
+
+    height:165px;
+
+    width:100%;
 
     display:flex;
 
@@ -619,35 +510,40 @@ body{
 
     align-items:flex-end;
 
-    margin:5px auto 15px;
+    margin:0 auto 8px;
 }
 
 .cake{
+
     position:relative;
 
-    width:190px;
-    height:90px;
+    width:175px;
 
-    border-radius:18px 18px 25px 25px;
+    height:78px;
+
+    border-radius:17px 17px 22px 22px;
 
     background:
-      linear-gradient(
-        #f8c2da,
-        #c875a5
-      );
+    linear-gradient(
+        #f5bfd8,
+        #bd709d
+    );
 
     box-shadow:
-      0 15px 35px rgba(0,0,0,.4);
+    0 14px 30px rgba(0,0,0,.4);
 }
 
 .icing{
+
     position:absolute;
 
-    top:-12px;
+    top:-10px;
+
     left:0;
 
     width:100%;
-    height:30px;
+
+    height:27px;
 
     border-radius:50%;
 
@@ -655,67 +551,89 @@ body{
 }
 
 .drip{
+
     position:absolute;
 
-    width:18px;
-    height:22px;
+    width:17px;
 
-    border-radius:0 0 12px 12px;
+    height:20px;
+
+    border-radius:0 0 10px 10px;
 
     background:#fff2f7;
-
-    top:10px;
 }
 
-.drip:nth-child(1){left:30px}
-.drip:nth-child(2){left:82px;height:28px}
-.drip:nth-child(3){right:30px}
+.drip:nth-child(1){
+    left:25px;
+}
+
+.drip:nth-child(2){
+    left:78px;
+    height:25px;
+}
+
+.drip:nth-child(3){
+    right:25px;
+}
 
 .candle{
+
     position:absolute;
 
-    width:12px;
-    height:55px;
+    width:11px;
 
-    top:-60px;
+    height:48px;
+
+    top:-52px;
 
     border-radius:5px;
 
     background:
-      repeating-linear-gradient(
+    repeating-linear-gradient(
         45deg,
         #fff,
         #fff 5px,
-        #e8a8c8 5px,
-        #e8a8c8 9px
-      );
+        #e7a7c7 5px,
+        #e7a7c7 9px
+    );
 }
 
-.candle:nth-of-type(2){left:48px}
-.candle:nth-of-type(3){left:89px}
-.candle:nth-of-type(4){right:48px}
+.candle:nth-of-type(2){
+    left:43px;
+}
+
+.candle:nth-of-type(3){
+    left:82px;
+}
+
+.candle:nth-of-type(4){
+    right:43px;
+}
 
 .flame{
+
     position:absolute;
 
-    width:16px;
-    height:23px;
+    width:15px;
 
-    top:-22px;
+    height:21px;
+
+    top:-20px;
+
     left:-2px;
 
-    border-radius:50% 50% 50% 50%;
+    border-radius:50%;
 
     background:
-      linear-gradient(
-        #fff6ad,
-        #ffbd42,
-        #ff6848
-      );
+    linear-gradient(
+        #fff7ad,
+        #ffbd40,
+        #ff6545
+    );
 
     box-shadow:
-      0 0 15px #ffb33e,
-      0 0 30px rgba(255,150,40,.6);
+    0 0 15px #ffb33d,
+    0 0 30px rgba(255,150,40,.6);
 
     animation:flicker .6s infinite alternate;
 }
@@ -731,38 +649,227 @@ body{
     }
 }
 
+
+/* =========================
+   WISH BOX
+========================= */
+
+.wish-box{
+
+    width:100%;
+
+    max-width:650px;
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    padding:4px 12px 10px;
+
+    margin-bottom:10px;
+}
+
+.wish-box::-webkit-scrollbar{
+    width:3px;
+}
+
+.wish-box::-webkit-scrollbar-thumb{
+
+    background:#d39bc4;
+
+    border-radius:10px;
+}
+
+.text{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:19px;
+
+    line-height:1.6;
+
+    color:#eee3eb;
+}
+
+.text strong{
+
+    color:#ffd2e5;
+
+    font-weight:600;
+}
+
+
+/* =========================
+   DUA SCREEN
+========================= */
+
+.dua-screen{
+
+    justify-content:flex-start !important;
+
+    padding-top:15px;
+}
+
+.duas{
+
+    width:100%;
+
+    max-width:610px;
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    padding:5px 10px;
+
+    margin:8px 0 12px;
+}
+
+.duas::-webkit-scrollbar{
+    width:3px;
+}
+
+.duas::-webkit-scrollbar-thumb{
+    background:#d39bc4;
+}
+
+.dua{
+
+    padding:13px 15px;
+
+    margin-bottom:10px;
+
+    border-radius:17px;
+
+    background:rgba(255,255,255,.045);
+
+    border:1px solid rgba(255,210,235,.1);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:18px;
+
+    line-height:1.4;
+
+    color:#f0e2eb;
+}
+
+
+/* =========================
+   ADVICE
+========================= */
+
+.advice-screen{
+
+    justify-content:flex-start !important;
+
+    padding-top:15px;
+}
+
+.advices{
+
+    width:100%;
+
+    max-width:600px;
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    padding:4px 10px;
+
+    margin:5px 0 10px;
+}
+
+.advices::-webkit-scrollbar{
+    width:3px;
+}
+
+.advices::-webkit-scrollbar-thumb{
+    background:#d39bc4;
+}
+
+.advice{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+    text-align:left;
+
+    padding:13px 15px;
+
+    margin-bottom:10px;
+
+    border-radius:17px;
+
+    background:rgba(255,255,255,.04);
+
+    border-left:2px solid #dba8ff;
+}
+
+.advice-icon{
+    font-size:23px;
+}
+
+.advice p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:18px;
+
+    line-height:1.35;
+
+    color:#eee2eb;
+}
+
+
 /* =========================
    END
 ========================= */
 
+.end-screen{
+
+    justify-content:center !important;
+}
+
 .end-big{
+
     font-family:'Great Vibes',cursive;
 
-    font-size:clamp(50px,10vw,85px);
+    font-size:clamp(55px,11vw,85px);
 
-    color:#ffd1e5;
+    color:#ffd0e4;
 
-    margin:10px 0;
+    margin:5px 0 10px;
 }
 
 .end-text{
+
+    max-width:570px;
+
     font-family:'Cormorant Garamond',serif;
 
-    font-size:21px;
+    font-size:20px;
 
-    line-height:1.8;
+    line-height:1.65;
 
     color:#eee2eb;
-
-    max-width:600px;
-
-    margin:auto;
 }
 
 .final-heart{
-    font-size:45px;
 
-    margin:22px 0;
+    font-size:42px;
+
+    margin:15px 0;
 
     animation:heartbeat 1.4s infinite;
 }
@@ -778,16 +885,18 @@ body{
     }
 }
 
+
 /* =========================
    FLOATING HEARTS
 ========================= */
 
 .heart{
+
     position:fixed;
 
     bottom:-40px;
 
-    z-index:4;
+    z-index:3;
 
     pointer-events:none;
 
@@ -797,7 +906,7 @@ body{
 @keyframes heartUp{
 
     0%{
-        transform:translateY(0) scale(.6) rotate(0);
+        transform:translateY(0) scale(.6);
         opacity:0;
     }
 
@@ -807,53 +916,87 @@ body{
 
     100%{
         transform:
-          translateY(-110vh)
-          translateX(var(--move))
-          scale(1.4)
-          rotate(25deg);
+        translateY(-110vh)
+        translateX(var(--move))
+        scale(1.4)
+        rotate(25deg);
 
         opacity:0;
     }
 }
 
+
 /* =========================
-   MOBILE
+   MOBILE FIX
 ========================= */
 
 @media(max-width:600px){
 
+    .app{
+        padding:8px;
+    }
+
     .card{
-        padding:35px 18px;
-        max-height:94vh;
+
+        width:96vw;
+
+        height:95vh;
+
+        border-radius:27px;
+
+        padding:24px 15px;
+    }
+
+    .open-text{
+        font-size:19px;
+    }
+
+    .section-title{
+        font-size:45px;
+    }
+
+    .cake-wrap{
+        height:145px;
+    }
+
+    .cake{
+        width:155px;
+        height:70px;
+    }
+
+    .candle:nth-of-type(2){
+        left:35px;
+    }
+
+    .candle:nth-of-type(3){
+        left:72px;
+    }
+
+    .candle:nth-of-type(4){
+        right:35px;
     }
 
     .text{
         font-size:18px;
-        line-height:1.65;
+        line-height:1.55;
     }
 
     .dua{
-        font-size:18px;
+        font-size:17px;
     }
 
     .advice p{
-        font-size:18px;
+        font-size:17px;
     }
 
     .butterfly{
-        font-size:27px;
+        font-size:25px;
     }
-
-    .cake{
-        width:175px;
-    }
-
-    .candle:nth-of-type(2){left:40px}
-    .candle:nth-of-type(3){left:81px}
-    .candle:nth-of-type(4){right:40px}
 }
+
 </style>
 </head>
+
 
 <body>
 
@@ -861,26 +1004,28 @@ body{
 
 <div id="stars"></div>
 
-<!-- BUTTERFLIES -->
+<!-- 🦋 BUTTERFLIES -->
+
 <div class="butterfly b1">🦋</div>
 <div class="butterfly b2">🦋</div>
 <div class="butterfly b3">🦋</div>
-<div class="butterfly b4">🦋</div>
+
 
 <div class="app">
 
 <div class="card">
 
+
 <!-- =========================
-     SCREEN 1
+     1 — OPENING
 ========================= -->
 
-<section class="section active" id="s1">
+<section class="section active">
 
     <div class="open-icon">🎁</div>
 
     <div class="mini">
-        A little surprise is waiting
+        A little surprise
     </div>
 
     <div class="open-title">
@@ -888,13 +1033,16 @@ body{
     </div>
 
     <p class="open-text">
-        Some moments are meant to be opened slowly…
-        and some wishes are meant to be felt, not just read.
+
+        Some beautiful things are meant to be
+        discovered slowly…
         <br>
-        So take a breath and open this little surprise. 🦋
+        So take a little moment,
+        and open this surprise. 🦋
+
     </p>
 
-    <button class="btn" onclick="next(2)">
+    <button class="btn" onclick="showSection(1)">
         Open Your Surprise ✨
     </button>
 
@@ -902,13 +1050,13 @@ body{
 
 
 <!-- =========================
-     SCREEN 2
+     2 — NAME
 ========================= -->
 
-<section class="section" id="s2">
+<section class="section">
 
     <div class="pre-title">
-        Today is all about
+        Today belongs to
     </div>
 
     <div class="main-name">
@@ -918,14 +1066,18 @@ body{
     <div class="name-line"></div>
 
     <p class="name-sub">
-        A beautiful name deserves a beautiful moment.
-        <br>
-        And today, that moment belongs to you. 🦋
+
+        A beautiful name deserves
+        a beautiful moment.
+
+        <br><br>
+
+        And today,
+        that moment is yours. 🦋
+
     </p>
 
-    <br>
-
-    <button class="btn" onclick="next(3)">
+    <button class="btn" onclick="showSection(2)">
         Continue 💗
     </button>
 
@@ -933,25 +1085,32 @@ body{
 
 
 <!-- =========================
-     SCREEN 3
+     3 — BIRTHDAY + WISH
 ========================= -->
 
-<section class="section" id="s3">
+<section class="section birthday-screen">
 
-    <div class="emoji-title">🎂 ✨</div>
+    <div class="emoji-title">
+        🎂 ✨
+    </div>
 
     <div class="section-title">
         Happy Birthday
     </div>
+
+
+    <!-- CAKE -->
 
     <div class="cake-wrap">
 
         <div class="cake">
 
             <div class="icing">
+
                 <div class="drip"></div>
                 <div class="drip"></div>
                 <div class="drip"></div>
+
             </div>
 
             <div class="candle">
@@ -970,51 +1129,94 @@ body{
 
     </div>
 
-    <div class="text">
 
-        Today is not just another date on the calendar.
-        It is a reminder that the world became a little more
-        beautiful because someone like you was born.
-        <br><br>
+    <!-- SCROLLABLE WISH -->
 
-        May your birthday bring you the kind of happiness that
-        stays even after the candles are gone and the celebration
-        becomes a memory.
-        <br><br>
+    <div class="wish-box">
 
-        May you meet people who appreciate your heart,
-        moments that make you smile without a reason,
-        and opportunities that take you closer to the life
-        you dream about.
-        <br><br>
+        <div class="text">
 
-        I hope this new chapter brings you peaceful mornings,
-        meaningful conversations, unexpected happiness and
-        memories that you will remember with a smile years from now.
-        <br><br>
+            Dear Adan,
 
-        Most importantly, never forget how special you are.
-        Keep your beautiful heart, keep your smile,
-        and keep believing in the good things waiting for you.
+            <br><br>
+
+            Today is not just another date on the calendar.
+            It is a beautiful reminder that the world became
+            a little more special because someone like you
+            was born.
+
+            <br><br>
+
+            On your birthday, I wish you the kind of happiness
+            that does not disappear when the celebration ends.
+            I wish you peaceful mornings, beautiful evenings,
+            genuine people, unforgettable memories and countless
+            reasons to smile.
+
+            <br><br>
+
+            May this new year of your life bring you closer
+            to everything your heart quietly wishes for.
+            May your dreams slowly turn into reality,
+            and may every difficult moment teach you something
+            that makes you stronger and wiser.
+
+            <br><br>
+
+            I hope you always have people around you who
+            appreciate your presence, respect your heart,
+            celebrate your happiness and stand beside you
+            when life becomes difficult.
+
+            <br><br>
+
+            Never forget that you do not have to be perfect
+            to be special. Sometimes the little things —
+            a smile, a kind word, a simple conversation —
+            are what make someone unforgettable.
+
+            <br><br>
+
+            So keep smiling.
+            Keep dreaming.
+            Keep growing.
+            And never allow the difficult chapters of life
+            to make you forget how beautiful your story can be.
+
+            <br><br>
+
+            <strong>
+            Happy Birthday once again, Adan Amin. 🎂🦋
+            </strong>
+
+            <br><br>
+
+            May this year bring you happiness that feels real,
+            success that makes you proud,
+            friendships that feel genuine,
+            and memories that stay with you for years.
+
+        </div>
 
     </div>
 
-    <br>
 
-    <button class="btn" onclick="next(4)">
-        A Little Prayer 🤍
+    <button class="btn" onclick="showSection(3)">
+        A Prayer For You 🤍
     </button>
 
 </section>
 
 
 <!-- =========================
-     SCREEN 4
+     4 — DUAS
 ========================= -->
 
-<section class="section" id="s4">
+<section class="section dua-screen">
 
-    <div class="emoji-title">🤲🏻 ✨</div>
+    <div class="emoji-title">
+        🤲🏻 ✨
+    </div>
 
     <div class="section-title">
         A Few Duas
@@ -1023,149 +1225,241 @@ body{
     <div class="duas">
 
         <div class="dua">
-            🤍 May Allah fill your life with peace, happiness and barakah.
+            🤍 May Allah fill your life with peace,
+            happiness and endless blessings.
         </div>
 
         <div class="dua">
-            🌙 May every silent prayer in your heart find its answer at the perfect time.
+            🌙 May every silent prayer in your heart
+            find its answer at the perfect time.
         </div>
 
         <div class="dua">
-            ✨ May Allah protect you from sadness, disappointment and everything that is not meant for you.
+            ✨ May Allah protect you from sadness,
+            disappointment and everything harmful to your heart.
         </div>
 
         <div class="dua">
-            🌸 May your future be brighter than everything you have imagined.
+            🌸 May your future be brighter than
+            everything you have imagined.
         </div>
 
         <div class="dua">
-            🕊️ May you always find peace wherever life takes you.
+            🕊️ May Allah surround you with sincere,
+            kind and genuine people.
         </div>
 
         <div class="dua">
-            💫 May Allah give you success, good health, genuine people and countless reasons to smile.
+            💫 May He bless your education, career,
+            dreams, health and every step of your journey.
+        </div>
+
+        <div class="dua">
+            🤲🏻 May your heart always find peace,
+            even when life does not go according to plan.
         </div>
 
     </div>
 
-    <button class="btn" onclick="next(5)">
-        One Last Thing 🌷
+    <button class="btn" onclick="showSection(4)">
+        A Little Advice 🌷
     </button>
 
 </section>
 
 
 <!-- =========================
-     SCREEN 5
+     5 — ADVICE
 ========================= -->
 
-<section class="section" id="s5">
+<section class="section advice-screen">
 
-    <div class="emoji-title">🌷</div>
+    <div class="emoji-title">
+        🌷
+    </div>
 
     <div class="section-title">
         Little Advice
     </div>
 
-    <div class="advice">
-        <div class="advice-icon">🦋</div>
-        <p>
-            Never lose your softness just because the world is sometimes hard.
-        </p>
+    <div class="advices">
+
+        <div class="advice">
+
+            <div class="advice-icon">
+                🦋
+            </div>
+
+            <p>
+                Never lose your softness just because
+                the world is sometimes hard.
+            </p>
+
+        </div>
+
+
+        <div class="advice">
+
+            <div class="advice-icon">
+                🌙
+            </div>
+
+            <p>
+                Protect your peace.
+                Not every argument deserves your energy.
+            </p>
+
+        </div>
+
+
+        <div class="advice">
+
+            <div class="advice-icon">
+                ✨
+            </div>
+
+            <p>
+                Keep your dreams bigger than your fears.
+            </p>
+
+        </div>
+
+
+        <div class="advice">
+
+            <div class="advice-icon">
+                🌸
+            </div>
+
+            <p>
+                Never let one bad chapter make you
+                doubt your entire story.
+            </p>
+
+        </div>
+
+
+        <div class="advice">
+
+            <div class="advice-icon">
+                🤍
+            </div>
+
+            <p>
+                Be kind to people,
+                but never forget your own worth.
+            </p>
+
+        </div>
+
+
+        <div class="advice">
+
+            <div class="advice-icon">
+                🌱
+            </div>
+
+            <p>
+                Grow at your own pace.
+                Your journey does not have to look like anyone else's.
+            </p>
+
+        </div>
+
     </div>
 
-    <div class="advice">
-        <div class="advice-icon">🌙</div>
-        <p>
-            Choose peace over unnecessary arguments and protect your inner peace.
-        </p>
-    </div>
 
-    <div class="advice">
-        <div class="advice-icon">✨</div>
-        <p>
-            Keep your dreams bigger than your fears.
-        </p>
-    </div>
-
-    <div class="advice">
-        <div class="advice-icon">🌸</div>
-        <p>
-            Do not let one bad chapter make you doubt your entire story.
-        </p>
-    </div>
-
-    <div class="advice">
-        <div class="advice-icon">🤍</div>
-        <p>
-            Be kind, but never forget your own worth.
-        </p>
-    </div>
-
-    <br>
-
-    <button class="btn" onclick="next(6)">
-        The Final Surprise 💝
+    <button class="btn" onclick="showSection(5)">
+        One Last Surprise 💝
     </button>
 
 </section>
 
 
 <!-- =========================
-     SCREEN 6
+     6 — END
 ========================= -->
 
-<section class="section" id="s6">
+<section class="section end-screen">
 
-    <div class="emoji-title">🦋 ✨ 🦋</div>
+    <div class="emoji-title">
+        🦋 ✨ 🦋
+    </div>
 
     <div class="end-big">
         And Finally…
     </div>
 
-    <p class="end-text">
+
+    <div class="end-text">
 
         May this year be kinder to you than the last.
+
         <br><br>
 
-        May you laugh more, worry less,
-        dream bigger and live beautifully.
+        May you laugh more,
+        worry less,
+        dream bigger,
+        and live beautifully.
+
         <br><br>
 
         May you always have people around you
         who genuinely care about you.
+
         <br><br>
 
         And whenever life feels difficult,
-        I hope you remember that difficult days
-        are only chapters — they are never the whole story.
+        remember:
+
+        <br>
+
+        <strong>
+        A difficult chapter is never the whole story.
+        </strong>
+
         <br><br>
 
         Keep smiling.
         Keep dreaming.
         Keep believing.
-        And most importantly,
-        keep being the beautiful person you are.
+
         <br><br>
 
-        Your next chapter is waiting…
-        and I hope it becomes your most beautiful one yet. 🤍
+        And most importantly…
 
-    </p>
+        <br>
+
+        Keep being the beautiful person you are.
+
+    </div>
+
 
     <div class="final-heart">
         ❤️
     </div>
 
+
     <div class="section-title">
-        Happy Birthday, Adan Amin
+        Happy Birthday,
+        <br>
+        Adan Amin
     </div>
 
-    <p style="font-family:'Cormorant Garamond';font-size:19px;color:#d9c8d5;">
-        With warmest wishes, beautiful prayers & a little bit of magic. 🦋
+
+    <p style="
+        font-family:'Cormorant Garamond';
+        font-size:18px;
+        color:#d9c8d5;
+    ">
+
+        May your next chapter
+        be your most beautiful one yet. 🦋
+
     </p>
 
 </section>
+
 
 </div>
 </div>
@@ -1174,20 +1468,26 @@ body{
 <script>
 
 /* =========================
-   SCREEN NAVIGATION
+   SECTION SYSTEM
 ========================= */
 
-function next(number){
+const sections =
+document.querySelectorAll(".section");
 
-    document.querySelectorAll(".section")
-        .forEach(section=>{
-            section.classList.remove("active");
-        });
+let current=0;
 
-    document.getElementById("s"+number)
-        .classList.add("active");
 
-    createBurst();
+/* Opening → Name */
+
+function showSection(number){
+
+    sections[current].classList.remove("active");
+
+    current=number;
+
+    sections[current].classList.add("active");
+
+    burst();
 }
 
 
@@ -1195,19 +1495,24 @@ function next(number){
    STARS
 ========================= */
 
-const stars=document.getElementById("stars");
+const stars=
+document.getElementById("stars");
 
 for(let i=0;i<100;i++){
 
-    let star=document.createElement("div");
+    const star=
+    document.createElement("div");
 
     star.className="star";
 
-    star.style.left=Math.random()*100+"%";
-    star.style.top=Math.random()*100+"%";
+    star.style.left=
+    Math.random()*100+"%";
+
+    star.style.top=
+    Math.random()*100+"%";
 
     star.style.animationDelay=
-        Math.random()*3+"s";
+    Math.random()*3+"s";
 
     stars.appendChild(star);
 }
@@ -1217,90 +1522,92 @@ for(let i=0;i<100;i++){
    FLOATING HEARTS
 ========================= */
 
-function createHeart(){
+function heart(){
 
-    const heart=document.createElement("div");
+    const h=
+    document.createElement("div");
 
-    heart.className="heart";
+    h.className="heart";
 
-    const hearts=[
+    const icons=[
         "❤️",
         "💗",
         "💖",
         "💕",
-        "💞",
-        "🤍"
+        "🤍",
+        "✨"
     ];
 
-    heart.innerHTML=
-        hearts[Math.floor(Math.random()*hearts.length)];
+    h.innerHTML=
+    icons[Math.floor(Math.random()*icons.length)];
 
-    heart.style.left=
-        Math.random()*100+"vw";
+    h.style.left=
+    Math.random()*100+"vw";
 
-    heart.style.fontSize=
-        (14+Math.random()*20)+"px";
+    h.style.fontSize=
+    (14+Math.random()*18)+"px";
 
-    heart.style.setProperty(
+    h.style.setProperty(
         "--move",
         (Math.random()*120-60)+"px"
     );
 
-    heart.style.animationDuration=
-        (5+Math.random()*5)+"s";
+    h.style.animationDuration=
+    (5+Math.random()*5)+"s";
 
-    document.body.appendChild(heart);
+    document.body.appendChild(h);
 
     setTimeout(()=>{
-        heart.remove();
+        h.remove();
     },10000);
 }
 
-setInterval(createHeart,650);
+setInterval(heart,750);
 
 
 /* =========================
-   BUTTON HEART BURST
+   SCREEN TRANSITION BURST
 ========================= */
 
-function createBurst(){
+function burst(){
 
-    for(let i=0;i<12;i++){
+    for(let i=0;i<10;i++){
 
-        const heart=document.createElement("div");
+        const h=
+        document.createElement("div");
 
-        heart.className="heart";
+        h.className="heart";
 
         const icons=[
             "💗",
-            "✨",
             "🦋",
+            "✨",
             "🤍"
         ];
 
-        heart.innerHTML=
-            icons[Math.floor(Math.random()*icons.length)];
+        h.innerHTML=
+        icons[Math.floor(Math.random()*icons.length)];
 
-        heart.style.left=
-            (35+Math.random()*30)+"vw";
+        h.style.left=
+        (35+Math.random()*30)+"vw";
 
-        heart.style.bottom="35vh";
+        h.style.bottom="35vh";
 
-        heart.style.fontSize=
-            (14+Math.random()*16)+"px";
+        h.style.fontSize=
+        (14+Math.random()*15)+"px";
 
-        heart.style.setProperty(
+        h.style.setProperty(
             "--move",
-            (Math.random()*250-125)+"px"
+            (Math.random()*220-110)+"px"
         );
 
-        heart.style.animationDuration=
-            (3+Math.random()*2)+"s";
+        h.style.animationDuration=
+        (3+Math.random()*2)+"s";
 
-        document.body.appendChild(heart);
+        document.body.appendChild(h);
 
         setTimeout(()=>{
-            heart.remove();
+            h.remove();
         },6000);
     }
 }
@@ -1309,3 +1616,4 @@ function createBurst(){
 
 </body>
 </html>
+
